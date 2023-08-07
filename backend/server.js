@@ -1,11 +1,14 @@
 const express = require('express')
+const mongoose = require('mongoose')
 const filmsRoutes = require('./routes/films')
+var bodyParser = require('body-parser');
 
 // express app
 const app = express()
 
 //middleware
-app.use(express.json())
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use((req, res, next) => {
     console.log(req.path, req.method)
@@ -15,7 +18,13 @@ app.use((req, res, next) => {
 // Using film router
 app.use('/films', filmsRoutes)
 
-const PORT = 4000;
+mongoose.connect("mongodb+srv://haswucc:hammad123@films.z5mgghg.mongodb.net/retryWrites=true&w=majority")
+.then(() => {
+    const PORT = 4000;
 
-// listen for requests
-app.listen(PORT, () => console.log("Server started on PORT " + PORT))
+    // listen for requests
+    app.listen(PORT, () => console.log("Connected to DB, server started on PORT " + PORT))    
+})
+.catch((error) => {
+    console.log(error)
+})
