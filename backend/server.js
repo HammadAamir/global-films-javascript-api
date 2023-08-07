@@ -1,19 +1,19 @@
 const express = require('express')
+const filmsRoutes = require('./routes/films')
 
 // express app
 const app = express()
 
 //middleware
+app.use(express.json())
+
 app.use((req, res, next) => {
     console.log(req.path, req.method)
     next()
 })
 
-// Routes
-app.get('/', (req, res) => {
-    res.json({msg: "Welcome to the app!"})
-})
-
+// Using film router
+app.use('/films', filmsRoutes)
 
 const PORT = 4000;
 
