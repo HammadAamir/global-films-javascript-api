@@ -1,0 +1,123 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+body {
+  background: #f1f1f1;
+  margin: 0;
+  font-family: "Poppins";
+}
+header {
+  background: #fff;
+}
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: #333;
+  text-decoration: none;
+}
+.pages{
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+.films-main{
+  max-width: 90%;
+  background-color: #1aac8346;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  align-items: center;
+  align-content: center;
+}
+.film-details{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+.film-item {
+  width: 90%;
+  margin-top: 0px;
+  border-bottom: 1px solid #4694d463;
+  text-align: center;
+}
+
+.film-item-details {
+  text-align: center;
+  align-content: center;
+}
+
+.film-item .film-item-heading {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  font-size: smaller
+}
+.film-image{
+  width: 250px;
+  height: 250px;
+  margin-bottom: 10px;
+}
+.new-film-button{
+  margin: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  width: 150px;
+  height: 40px;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+/* Film Form */
+label, input {
+  display: block;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+.logout-button {
+  background: #e7195a;
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}

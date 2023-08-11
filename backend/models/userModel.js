@@ -10,7 +10,7 @@ const mongoose = require('mongoose')
         required: true
     },
     password: {
-        type: Date,
+        type: String,
         required: true
     }
  }, {timestamps: true})

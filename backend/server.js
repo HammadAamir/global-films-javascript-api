@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const filmsRoutes = require('./routes/films')
+const userRoutes = require('./routes/user')
 var bodyParser = require('body-parser');
 
 // express app
@@ -16,7 +17,8 @@ app.use((req, res, next) => {
 })
 
 // Using film router
-app.use('/films', filmsRoutes)
+app.use('/api/films', filmsRoutes)
+app.use('/', userRoutes)
 
 mongoose.connect("mongodb+srv://haswucc:hammad123@films.z5mgghg.mongodb.net/retryWrites=true&w=majority")
 .then(() => {
